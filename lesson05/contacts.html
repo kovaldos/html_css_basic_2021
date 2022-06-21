@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<nav class="header__menu">
+				<ul class="header__menu-list">
+					<li class="header__menu-list-item">
+						<a class="header__menu-link" href="index.html">Главная</a>
+					</li>
+					<li class="header__menu-list-item">
+						<a class="header__menu-link" href="contacts.html">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main class="main">
+		<div class="contacts-us">
+			<div class="container">
+				<h2 class="contacts-us__title title title--h2">Contact Us</h2>
+				<p class="contacts-us__text text">Lorem ipsum</p>
+			</div>
+		</div>
+		<div class="contact-us__contacts contacts">
+			<div class="container">
+				<div class="contacts__cols">
+					<div class="contacts__col contacts__col--1">
+						<img class="contacts__img" src="https://picsum.photos/seed/picsum/350/200"
+							alt="Произвольное изображение с сайта https://picsum.photos">
+						<div class="contacts__address">
+							<h4 class="contacts__address-title title title--h4">Address</h4>
+							<p class="contacts__address-text text">St-Petersburg Baseynaya st, 77</p>
+						</div>
+						<div class="contacts__phone">
+							<h4 class="contacts__phone-title title title--h4">Phone</h4>
+							<ul class="contacts__phone-list">
+								<li class="contacts__phone-list-item">+7(911)123-45-69</li>
+								<li class="contacts__phone-list-item">+7(911)789-45-61</li>
+							</ul>
+						</div>
+						<div class="contacts__online">
+							<h4 class="contacts__online-title title title--h4">Online service</h4>
+							<ul class="contacts__online-list">
+								<li class="contacts__online-list-item">
+									<a href="https://my-website.com">my-website.com</a>
+								</li>
+								<li class="contacts__online-list-item"> <a href="mailto:mail@mail.com">mail@mail.com</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="contacts__col contacts__col--2">
+						<div class="feedback">
+							<h4 class="feedback__title title title--h4">Send us message</h4>
+							<form class="feedback__form fb-form" action="#">
+								<fieldset class="fb-form__fieldset">
+									<legend class="title title--h4">Title for feedback form</legend>
+									<label class="fb-form__label">
+										Full Name
+										<input class="fb-form__field" type="text" name="firstName" id="firstName"
+											placeholder="Enter your name" required="" title="Enter your name">
+									</label>
+									<label class="fb-form__label">
+										Email
+										<input class="fb-form__field" type="email" name="email" id="email"
+											placeholder="mail@mail.com" required="" title="Enter correct email">
+									</label>
+									<label class="fb-form__label">Message
+										<textarea class="fb-form__field" name="message" id="fb-message"
+											placeholder="Enter your message" cols="30" rows="5"></textarea>
+									</label>
+									<button class="fb-form__submit" type="submit">Send</button>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="contacts-map" id="map">
+				<iframe
+					src="https://yandex.ru/map-widget/v1/?um=constructor%3Adaa8acf92a636966f3278fd96003493517dc76b3fc5e55d86f021ef70d870159&amp;source=constructor"
+					width="100%" height="659" frameborder="0"></iframe>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__heading">
+				<h3 class="footer__heading-title title title--h3">Это три слова</h3>
+				<p class="footer__heading-text text">Это не более десяти слов Lorem ipsum dolor sit amet.</p>
+			</div>
+		</div>
+		<hr class="footer__stripe">
+		<div class="container">
+			<div class="footer__contacts">
+				<ul class="footer__contacts-list">
+					<li class="footer__contacts-list-item footer__contacts-list-item--title">lorem ipsum dolor</li>
+					<li class="footer__contacts-list-item footer__contacts-list-item--phone">+7(812)123-45-67</li>
+					<li class="footer__contacts-list-item footer__contacts-list-item--email">mail@mail.com</li>
+				</ul>
+			</div>
+			<div class="footer__copy">
+				<p class="footer__copy-text text">© 2022 Все права защищены</p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
