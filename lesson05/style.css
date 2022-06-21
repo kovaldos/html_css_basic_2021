@@ -1,0 +1,147 @@
+* {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.text {
+	font-size: 16px;
+	line-height: 26px;
+	color: #1F3F68;
+}
+
+.title {
+	margin: 0;
+	padding: 0;
+}
+
+.title--h1 {
+	font-size: 64px;
+	color: #1F3F68;
+}
+
+.title--h2 {
+	font-weight: 500;
+	font-size: 44px;
+	text-align: center;
+}
+
+.title--h3 {
+	font-size: 36px;
+	text-align: center;
+}
+
+.title--h4 {
+	font-size: 20px;
+	line-height: 20px;
+	color: #1F3F68;
+}
+
+.header {
+	min-height: 60px;
+	background-color: #ccc;
+}
+.header__menu {
+	padding: 10px 0;
+}
+.header__menu-list {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+.header__menu-list-item:not(:last-of-type) {
+	margin: 0 25px 0 0;
+}
+
+.hero__title {
+	width: 100%;
+	max-width: 510px;
+}
+
+.hero__text {
+	width: 100%;
+	max-width: 425px;
+}
+
+.what-we-do__items {
+	display: flex;
+	justify-content: space-between;
+}
+.what-we-do__item {
+	width: 359px;
+	border: 1px solid #000;
+}
+
+.contacts__cols {
+	display: flex;
+}
+
+.contacts__col--2 {
+	flex: 1 1 auto;
+	margin: 0 0 0 25px;
+}
+
+.fb-form {
+	width: 100%;
+	max-width: 100%;
+	margin: 25px 0;
+}
+
+.fb-form__fieldset {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.fb-form__label {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 0;
+}
+
+.fb-form__field {
+	border: 1px solid #356ead;
+	box-sizing: border-box;
+	border-radius: 10px;
+	opacity: 0.4;
+	padding: 10px;
+	margin: 5px 0;
+}
+
+.fb-form__submit {
+	background: #5a98d0;
+	box-shadow: 5px 20px 050px rgba(16, 112, 177, 0.2);
+	border-radius: 10px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 0 15px;
+	max-width: 50%;
+	cursor: pointer;
+}
+
+.footer__heading-title {
+	width: 340px;
+}
+
+.footer__heading-text {
+	width: 495px;
+}
+
+.footer__contacts-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+	list-style: none;
+}
