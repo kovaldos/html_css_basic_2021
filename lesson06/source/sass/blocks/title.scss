@@ -1,0 +1,27 @@
+.title {
+	margin: 0;
+	padding: 0;
+	color: $color-default-white;
+	transition: color $trans-default;
+	text-transform: uppercase;
+	line-height: 1.5;
+	&--h1 {
+		font-weight: 300;
+		font-size: 64px;
+		line-height: 74px;
+		letter-spacing: 0.04em;
+		color: $color-catalina-blue;
+	}
+	&--h2 {
+		font-weight: 700;
+		font-size: 2rem;
+	}
+	&--h3 {
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+	&--h4 {
+		font-weight: 700;
+		font-size: 1.2rem;
+	}
+}
