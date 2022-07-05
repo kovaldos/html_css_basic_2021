@@ -1,0 +1,32 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "contacts.html",
+        text: "",
+        icon: "icon-address-book",
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container.header__container
+      if(currentUrl === "index.html")
+        //- lighthouse снимает 10 баллов SEO за <a> без href
+        span.header__logo
+          img(src="./img/svg/logo.svg" alt="Logo")
+      else
+        a.header__logo(href="index.html" aria-label="Переход на главную")
+          img(src="./img/svg/logo.svg" alt="Logo")
+      nav.main-nav
+        //- button.main-nav__toggle.btn.btn--reset(type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger-icon)
+        .main-nav__wrapper(data-burger-body)
+          ul.main-nav__list
+            each link in headerLinks
+              - const activeState = currentUrl === link.href
+              li.main-nav__item
+                if(activeState)
+                  span.main-nav__link.link.is-active=link.text
+                    +icon(link.icon, 34, 38)
+                else
+                  a.main-nav__link.link(href=link.href data-target=link.anchorLink)=link.text
+                    +icon(link.icon, 34, 38)
