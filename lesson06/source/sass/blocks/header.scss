@@ -1,6 +1,12 @@
 .header {
   padding: 34px 0 17px;
   background-color: $color-transparent;
+  @include vp-1023 {
+    padding: 47px 0 17px;
+  }
+  @include vp-767 {
+    padding: 16px 0;
+  }
   &__container {
     display: flex;
     align-items: center;

@@ -1,0 +1,96 @@
+.feedback {
+	width: 100%;;
+	&__form {
+		padding: 26px;
+		background-color: $color-default-white;
+		box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+		border-radius: 10px;
+		@include vp-767 {
+			padding: 20px;
+		}
+	}
+}
+.fb-form {
+	padding: 30px;
+	@include vp-767 {
+		padding: 15px;
+	}
+	&__title {
+		margin: 0 0 48px;
+	}
+	&__fieldset {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	&__field {
+		width: 100%;
+		max-width: 100%;
+		padding: 0 0 32px;
+	}
+	.custom-input,
+	.custom-textarea {
+		&__label {
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 30px;
+			letter-spacing: 0.04em;
+			color: rgba($color-catalina-blue, 0.8);
+			margin: 0 0 8px;
+		}
+		label {
+			flex-direction: column;
+			align-items: flex-start;
+			input,
+			textarea {
+				margin-left: 0;
+				padding: 0;
+				width: 100%;
+				height: 72px;
+				border: 1px solid rgba($color-lochmara, 0.4);
+				border-radius: 10px;
+				padding: 21px 42px;
+				font-weight: 300;
+				font-size: 16px;
+				line-height: 30px;
+				letter-spacing: 0.04em;
+				color: #1f3f68;
+				@include vp-767 {
+					padding: 13px 22px;
+					height: 47px;
+				}
+				&::placeholder {
+					font-weight: 300;
+					font-size: 16px;
+					line-height: 30px;
+					letter-spacing: 0.04em;
+					color: rgba($color-catalina-blue, 0.2);
+				}
+			}
+			textarea {
+				min-height: 144px;
+				height: 100%;
+				max-height: 144px;
+			}
+		}
+	}
+	&__submit {
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 26px;
+		letter-spacing: 0.04em;
+		color: $color-default-white;
+		width: 100%;
+		padding: 23px;
+		box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+		border-radius: 10px;
+		max-width: 100%;
+		text-transform: uppercase;
+		margin: 40px 0 0;
+		@include vp-767 {
+			padding: 15px;
+		}
+	}
+}

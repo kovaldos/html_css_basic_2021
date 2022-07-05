@@ -1,0 +1,45 @@
+mixin our-projects()
+	-
+		const data = {
+			title: "Our Finished Project",
+			text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+			items: [
+				{
+					href: "#",
+					classModifier: "our-projects__item--01",
+					title: "Smart Home Installation",
+					src: "content",
+					img: "projects-img-1",
+					alt: "Photo of the interior of the house",
+				},
+				{
+					href: "#",
+					classModifier: "our-projects__item--02",
+					title: "Sparklite App",
+					src: "content",
+					img: "projects-img-2",
+					alt: "Two white iPhones",
+				},
+				{
+					href: "#",
+					classModifier: "our-projects__item--03",
+					title: "Car-Rapetition App",
+					src: "content",
+					img: "projects-img-3",
+					alt: "Part of the application interface with a schematic picture of a car",
+				},
+			],
+		}
+	
+	section.our-projects 
+		.container.our-projects__container 
+			h2.title.title--h2.our-projects__title=data.title
+			p.text.our-projects__text=data.text
+			.our-projects__items 
+				each item in data.items 
+					a(href=item.href class=item.classModifier).our-projects__item
+						.our-projects__item-bg 
+							+picture(item.src, item.img, "jpg", item.alt)
+						h3.title.title--h3.our-projects__item-title=item.title
+
+

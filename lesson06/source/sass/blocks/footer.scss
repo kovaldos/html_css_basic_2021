@@ -1,34 +1,121 @@
 .footer {
   padding: 40px 0;
-  background-color: $color-neon-blue;
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+  background-color: $color-lochmara;
+  @include vp-639 {
+    padding: 18px 0;
   }
-  &__logo {
-    display: inline-flex;
+  &__top {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 40px;
-    background-color: $color-transparent;
-    transition: background-color $trans-default;
-    border-radius: 5px;
-    padding: 5px;
-    &:focus {
-      outline: none;
+    padding: 91px 0 96px;
+    @include vp-1279 {
+      margin: 0 auto;
+      max-width: 700px;
     }
-    &:hover,
-    &:focus-visible {
-      background-color: $color-default-white;
+    @include vp-1023 {
+      max-width: 521px;
+    }
+    @include vp-767 {
+      padding: 0 0 41px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__heading {
+    max-width: 495px;
+    @include vp-1023 {
+      margin: 0 50px 0 0;
+    }
+    @include vp-767 {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+  &__title {
+    color: $color-default-white;
+    max-width: 341px;
+    margin: 0 0 32px;
+    @include vp-767 {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &__text {
+    color: rgba($color-default-white, 0.6);
+    @include vp-767 {
+      text-align: center;
+      margin: 0 0 40px;
+    }
+  }
+  &__btn {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    padding: 15px;
+    max-width: 237px;
+    margin: 0;
+    @include vp-1023 {
+      max-width: 133px;
+      padding: 5px;
+      line-height: 24px;
+    }
+  }
+  &__hr {
+    margin: 0;
+  }
+  &__bottom {
+    padding: 64px 0 24px;
+    @include vp-1279 {
+      margin: 0 auto;
+      max-width: 700px;
+    }
+    @include vp-1023 {
+      max-width: 515px;
+    }
+    @include vp-767 {
+      padding: 32px 0 14px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    margin: 0;
+    padding: 0 0 0 20px;
+    @include vp-1023 {
+      grid-template-columns: auto;
+    }
+    @include vp-767 {
+      grid-row-gap: 18px;
+    }
+    &-item {
+      color: $color-default-white;
+    }
+    &-text {
+      padding: 0 20px;
+    }
+    &-link {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: $color-default-white;
+      padding: 0 0 0 20px;
+      &::after {
+        background-color: $color-default-white;
+        bottom: 0;
+      }
     }
   }
   &__copy {
-    font-size: 1.5rem;
-  }
-  &__link {
-    font-size: 1.2rem;
+    margin: 64px 0 0;
+    color: rgba($color-default-white, 0.4);
+    @include vp-767 {
+      margin: 32px 0 0;
+      text-align: center;
+    }
   }
 }

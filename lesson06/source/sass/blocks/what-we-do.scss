@@ -1,0 +1,89 @@
+.what-we-do {
+	padding: 30px 0;
+	&__title {
+		margin: 34px 0;
+		text-align: center;
+		@include vp-767 {
+			margin: 18px 0 2px;
+		}
+	}
+	&__list {
+		margin: 0;
+		padding: 30px 0;
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		@include vp-1023 {
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+		}
+		&-item {
+			padding: 32px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			background: $color-default-white;
+			box-shadow: 5px 20px 50px rgba($color-denim, 0.2);
+			border-radius: 10px;
+			&:not(:last-of-type) {
+				margin: 0 32px 0 0;
+			}
+			@include vp-1023 {
+				max-width: 335px;
+				&:not(:last-of-type) {
+					margin: 0 0 32px 0;
+				}
+			}
+		}
+		&-icon {
+			margin: 11px 0 0;
+		}
+		&-title {
+			text-align: left;
+			margin: 45px 0 15px;
+		}
+		&-text {
+			margin: 0 0 30px;
+			line-height: 26px;
+			letter-spacing: 0.05em;
+			color: rgba($color-catalina-blue, 0.6);
+		}
+	}
+	&__link {
+		align-self: flex-start;
+		margin: -5px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 30px;
+		letter-spacing: 0.05em;
+		color: $color-picton-blue;
+		&::after {
+			display: none;
+		}
+		&-icon {
+			margin: 0 0 0 20px;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+		}
+		&:hover &,
+		&:focus-visible & {
+			&-icon {
+				animation-name: arrowRight;
+				animation-timing-function: ease-in-out;
+				@keyframes arrowRight {
+					0% {
+						transform: translateX(0);
+					}
+					50% {
+						transform: translateX(10px);
+					}
+					100% {
+						transform: translateX(0);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+mixin what-we-do()
+	-
+		const data = {
+			title: "What we do to help our client grow in digital era",
+			items: [
+				{
+					icon: "icon-what-we-do-1",
+					width: 172,
+					height: 123,
+					title: "Make Your business To Be Better Famous In Internet",
+					text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+					link: "Learn more",
+				},
+				{
+					icon: "icon-what-we-do-2",
+					width: 132,
+					height: 123,
+					title: "Bring Technology To Your Comfortable Home",
+					text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+					link: "Learn more",
+				},
+				{
+					icon: "icon-what-we-do-3",
+					width: 148,
+					height: 123,
+					title: "Build Your Digital Product That Suitable For Your Need",
+					text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+					link: "Learn more",
+				},
+			]
+		}
+
+	section.what-we-do#what-we-do
+		.container.what-we-do__container
+			h2.title.title--h2.what-we-do__title=data.title
+			ul.what-we-do__list 
+				each item in data.items 
+					li.what-we-do__list-item(class!=item.itemClass)
+						+icon(item.icon, item.width, item.height).what-we-do__list-icon
+						h3.title.title--h3.what-we-do__list-title=item.title
+						p.text.what-we-do__list-text=item.text
+						a.link.what-we-do__link(href="#" target="_blank" rel="noopener noreferrer")=item.link
+							+icon("icon-arrow-forward", 22, 22).what-we-do__link-icon

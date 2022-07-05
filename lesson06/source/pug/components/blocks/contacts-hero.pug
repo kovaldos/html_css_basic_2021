@@ -1,0 +1,18 @@
+mixin contacts-hero ()
+	-
+		const data = {
+			title: "Contact Us",
+			subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+			bg: {
+
+			}
+		}
+
+	section.contacts-hero 
+		.contacts-hero__bg
+			+picture("content", "contacts-hero-bg", "jpg", "contacts-hero-background")
+		.container.contacts-hero__container 
+			.contacts-hero__wrapper
+				.contacts-hero__heading 
+					h1.title.title--h1.contacts-hero__title=data.title
+						span.contacts-hero__subtitle=data.subtitle

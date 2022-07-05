@@ -1,21 +1,45 @@
 mixin footer(footerMods)
   -
     const data = {
-      year: 2022,
-      link: {
-        href: "https://github.com/kovaldos",
-        target: "_blank",
-        rel: "noopener noreferrer nofollow",
-        text: "by Y.K.",
-      }
+      title: "Interested to work with our team?",
+      text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      btn: {
+        text: "Let’s Talk",
+      },
+      items: [
+        {
+          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        },
+        {
+          href: "tel:+78127313432",
+          text: "+7-812-7313-432",
+        },
+        {
+          href: "mailto:hello.site@gmail.com",
+          text: "hello.site@gmail.com",
+        },
+      ],
+      copy: "2021 All rights reserved.",
     }
 
   footer.footer(class=footerMods)
     .container.footer__container
-      a.footer__logo(href="https://rs.school/js/" target="_blank" rel="noopener noreferrer nofollow")
-        img(src="./img/svg/logo-js.svg", alt="RS School JS logo")
-      .footer__copy 
-        span &copy;&nbsp;
-        span=data.year
-      a.footer__link.link(href=data.link.href target=data.link.target rel=data.link.rel)=data.link.text
+      .footer__top
+        .footer__heading
+          h2.title.title--h2.footer__title=data.title
+          p.text.footer__text=data.text
+        +btn(data.btn).btn--pcbl.footer__btn
+    hr.footer__hr
+    .container.footer__container
+      .footer__bottom
+        ol.footer__list 
+          each item in data.items 
+            li.footer__list-item
+              if item.href 
+                a.link.footer__list-link(href=item.href)=item.text
+              else 
+                p.text.footer__list-text=item.text
+        .footer__copy
+          span.text=data.copy
+
   +btn-to-top()

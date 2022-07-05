@@ -1,0 +1,105 @@
+mixin contact-us ()
+	-
+		const data = {
+			address: {
+				title: "address",
+				text: "Id convallis placerat sit sed duis id amet volutpat quam a, pharetra.",
+			},
+			phone: {
+				title: "phone",
+				link1: {
+					href: "tel:+78127134321",
+					text: "+7-812-731-4321",
+				},
+				link2: {
+					href: "tel:+78170001234",
+					text: "+7-817-000-1234",
+				},
+			},
+			online: {
+				title: "online service",
+				link1: {
+					icon: "icon-web",
+					href: "www.site.com",
+					text: "www.site.com"
+				},
+				link2: {
+					icon: "icon-email",
+					href: "mailto:hello.site@gmail.com",
+					text: "hello.site@gmail.com"
+				},
+			},
+			form: {
+				title: "send us message",
+				name: {
+					inputLabel: "Full Name",
+					inputPlaceholder: "Your name",
+					inputError: "Please Enter Your Name",
+					inputId: "full-name",
+					inputName: "full-name",
+					inputMinLength: 2,
+				},
+				email: {
+					inputLabel: "Email",
+					inputPlaceholder: "Your Email",
+					inputError: "Please Enter Correct Email",
+					inputId: "email",
+					inputName: "email",
+				},
+				message: {
+					inputLabel: "Message",
+					inputPlaceholder: "Your Message",
+					inputError: "Please Enter Your Message",
+					inputId: "message",
+					inputName: "message",
+				},
+				btn: {
+					type: "submit",
+					text: "submit"
+				}
+			}
+		}
+
+	section.contact-us__contacts.contacts
+		.container
+			.contacts__cols
+				.contacts__col.contacts__col--01
+					+picture("content", "contacts-img", "png", "Drawing of a girl sitting on a yellow bean bag")
+					.contacts__address
+						h4.contacts__address-title.title.title--h4=data.address.title
+						p.contacts__address-text.text=data.address.text
+					.contacts__phone
+						h4.contacts__phone-title.title.title--h4=data.phone.title
+						ul.contacts__phone-list
+							li.contacts__phone-list-item 
+								a.contacts__phone-list-link(href=data.phone.link1.href)
+									+icon("icon-handset", 24, 24)
+									span=data.phone.link1.text 
+							li.contacts__phone-list-item 
+								a.contacts__phone-list-link(href=data.phone.link2.href)
+									+icon("icon-handset", 24, 24)
+									span=data.phone.link2.text
+					.contacts__online
+						h4.contacts__online-title.title.title--h4=data.online.title
+						ul.contacts__online-list
+							li.contacts__online-list-item
+								a.contacts__online-list-link(href=data.online.link1.href)
+									+icon(data.online.link1.icon, 24, 24)
+									span=data.online.link1.text
+							li.contacts__online-list-item
+								a.contacts__online-list-link(href=data.online.link2.href)
+									+icon(data.online.link2.icon, 24, 24)
+									span=data.online.link2.text
+				.contacts__col.contacts__col--02
+					.feedback
+						.feedback__form(data-validate)
+							form.fb-form(action='#')
+								fieldset.fb-form__fieldset
+									h4.fb-form__title.title.title--h4=data.form.title
+									+custom-input(data.form.name)(title='Enter your name' data-validate-type="text").fb-form__field.fb-form__field--input
+									+custom-input(data.form.email)(title='Enter your email' data-validate-type="email").fb-form__field.fb-form__field--input
+									+custom-textarea(data.form.email)(cols='30' rows='5' data-validate-type="textarea").fb-form__field.fb-form__field--message
+									+btn(data.form.btn).btn--pcbl.fb-form__submit
+			.contacts__map#map
+				iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Adaa8acf92a636966f3278fd96003493517dc76b3fc5e55d86f021ef70d870159&source=constructor' width='940' height='480' frameborder='0')
+
