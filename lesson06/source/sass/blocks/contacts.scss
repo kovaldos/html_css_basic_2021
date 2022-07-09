@@ -116,6 +116,9 @@
 	&__map {
 		padding: 44px 100px;
 		margin: 0 0 21px;
+		iframe {
+			border: 0;
+		}
 		@include vp-1279 {
 			padding: 43px 43px 0 43px;
 			margin: 0 0 7px;

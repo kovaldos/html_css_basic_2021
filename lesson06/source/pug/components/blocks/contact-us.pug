@@ -98,8 +98,8 @@ mixin contact-us ()
 									h4.fb-form__title.title.title--h4=data.form.title
 									+custom-input(data.form.name)(title='Enter your name' data-validate-type="text").fb-form__field.fb-form__field--input
 									+custom-input(data.form.email)(title='Enter your email' data-validate-type="email").fb-form__field.fb-form__field--input
-									+custom-textarea(data.form.email)(cols='30' rows='5' data-validate-type="textarea").fb-form__field.fb-form__field--message
+									+custom-textarea(data.form.message)(data-validate-type="textarea").fb-form__field.fb-form__field--message
 									+btn(data.form.btn).btn--pcbl.fb-form__submit
 			.contacts__map#map
-				iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Adaa8acf92a636966f3278fd96003493517dc76b3fc5e55d86f021ef70d870159&source=constructor' width='940' height='480' frameborder='0')
+				iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Adaa8acf92a636966f3278fd96003493517dc76b3fc5e55d86f021ef70d870159&source=constructor' width='940' height='480')
 
